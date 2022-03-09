@@ -1,0 +1,63 @@
+/*푸터*/
+#footer {
+    width: 100%;
+    height: 130px;
+    border-top: 1px solid #e5e5e5;
+    font-size: 13px;
+    margin-top: 28px;
+    padding-top: 20px
+}
+
+.copyright {
+    text-align: center;
+    color: #969a9b
+}
+
+.footer_title {
+    font-size: 15px;
+    font-weight: bold
+}
+
+.footer_content {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.copyright > ul > li {
+    float: left;
+    padding: 0 30px;
+    border-right: 1px solid #969a9b
+}
+
+.copyright > ul > li:nth-child(4) {
+    border-right: none
+}
+
+.copyright > ul {
+    padding: 25px 0;
+    width: 58%;
+    margin: 0 auto;
+}
+
+.copyright > ul > li:nth-child(3) {
+    color: #5a5d5a
+}
+
+.copyright > p {
+    line-height: 200%
+}
+
+.copyright-m {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .copyright {
+        display: none;
+    }
+
+    .copyright-m {
+        display: block;
+        padding-left: 13px;
+    }
+}

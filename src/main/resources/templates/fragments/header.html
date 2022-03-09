@@ -1,0 +1,29 @@
+<html lagn="ko" xmlns:th="http://www.thymeleaf.org">
+<!--headerFragment 선언-->
+<div th:fragment="headerFragment">
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <img th:src="@{/images/dailyrecordofbook.png}"><a href="/">책방일지</a>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__menu1">
+                <a href="/about/store">책방 소개</a>
+                <ul class="menu1_submenu">
+                    <li><a href="/about/store">서점 소개</a></li>
+                    <li><a href="/about/community">모임 소개</a></li>
+                    <li><a href="/about/member">지기 소개</a></li>
+                </ul>
+            </li>
+            <li><a href="/faq">자주 묻는 질문</a></li>
+            <li><a href="/sns">SNS</a></li>
+            <li><a href="https://smartstore.naver.com/dailyrecordofbook" target="_blank">북 큐레이션</a></li>
+            <li><a href="/come">오시는 길</a></li>
+        </ul>
+        <ul class="navbar__sns">
+            <li><a href="https://www.instagram.com/dailyrecordofbook/?igshid=h741hfqig91w" target="_blank"><img th:src="@{/images/instagram_nav.png}"/></i></a></li>
+            <li><a href="https://blog.naver.com/dailyrecordofbook1" target="_blank"><img th:src="@{/images/blog_nav.png}"/></i></a></li>
+        </ul>
+        <a href="#" class="navbar__toggleBtn"><i class="fas fa-bars"></i> </a>
+    </nav>
+</div>
+</html>

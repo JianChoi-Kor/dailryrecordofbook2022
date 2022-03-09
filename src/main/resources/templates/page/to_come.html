@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default_layout}">
+
+<!-- index.html 고유 CSS 추가 -->
+<th:block layout:fragment="css">
+<!--    <link rel="stylesheet" th:href="@{/css/page/home.css}" >-->
+</th:block>
+
+<!-- index.html 고유 스크립트 추가 -->
+<th:block layout:fragment="script">
+    <script th:src="@{/javascript/google_map.js}"></script>
+</th:block>
+
+<div layout:fragment="content">
+    <div class="main_content">
+        <h1 class="content_title">오시는 길</h1>
+        <button type="button" id="map_button">책방일지 이동하기</button>
+        <br>
+
+        <div id="map"></div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeG0kckWYH74jf1khxIJqbmWdYoEjLzoE&callback=initMap&region=kr"></script>
+        <script th:src="@{/javascript/google_map.js}"></script>
+        
+        <div class="content_info">
+            <h2 class="address_title">지하철</h2>
+            <a class="address_text">
+                현충로역(1호선) 2번 또는 3번 출구로 나오시면 됩니다.<br>
+                역에서 책방까지 도보로 10분 정도 소요됩니다.
+            </a>
+            <h2 class="address_title">버스</h2>
+            <a class="address_text">
+                가까운 버스 정류장은 현충로역 3번, 4번 출구 쪽에 있습니다.<br>
+                410번, 503번, 564번, 649번, 남구1-1, 순환3-1 버스를 이용해주시면 됩니다.
+            </a>
+            <h2 class="address_title">자가용</h2>
+            <a class="address_text">
+                책방일지 앞 2대 주차가능합니다.<br>
+                오시기 전 연락주시면 주차상황 안내드리겠습니다. (010-4883-0423)
+            </a>
+        </div>
+        <div id="map_info">
+            <h3>책방일지</h3>
+            <a id="map_address">대구광역시 남구 자유1길 86 1층</a>
+            <a id="map_address_sub">(42452)</a>
+            <a><br></a>
+            <a>영업시간 10:00 ~ 19:00<br></a>
+            <a id="map_sub">(정확한 시간은 인스타그램 참고 부탁드립니다.)</a>
+        </div>
+    </div>
+</div>
+</html>

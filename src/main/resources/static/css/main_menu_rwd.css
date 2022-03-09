@@ -1,0 +1,154 @@
+
+:foot {
+        --text-color: #000a12;
+        --background-color: #ffffff;
+        --accent-color: #FAF4C0;
+}
+
+ul, ol, li {
+        list-style:n one;
+        margin: 0;
+        padding: 0;
+}
+
+.navbar {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--background-color);
+        padding: 8px 9px;
+}
+
+.navbar__logo {
+        font-size: 24px;
+        color: var(--text-color);
+}
+
+.navbar__logo > img {
+        width: 36px;
+        vertical-align: sub;
+}
+
+.navbar__logo a {
+        text-align: center;
+        margin-left: 5px;
+        font-weight: bold;
+        vertical-align: super;
+}
+
+a {
+        text-decoration: none;
+        color: var(--text-color);
+}
+
+.navbar__menu {
+        background-color: white;
+}
+
+.navbar__menu li {
+        display: inline-block;
+        width: 91.5px;
+        padding: 8px 6.5px;
+        text-align: center;
+        position: relative;
+        background-color: white;
+}
+
+.navbar__menu li:hover {
+        background-color: #FAF4C0;
+        border-radius: 4px;
+}
+
+.navbar__sns {
+        list-style: none;
+        display: flex;
+        padding-left: 0;
+}
+
+.navbar__sns li {
+        padding: 5px 3px;
+}
+
+.navbar__sns li img {
+    width: 32px;
+}
+
+.navbar__toggleBtn {
+        display: none;
+        position: absolute;
+        right: 32px;
+        font-size: 24px;
+        color: var(--text-color);
+}
+
+.navbar__toggleBtn i {
+        vertical-align: sub;
+}
+
+.menu1_submenu {
+    display:none;
+    position:absolute;
+    top:30px;
+    left:0px;
+}
+
+li:hover .menu1_submenu {
+    display:block;
+}
+
+.menu1_submenu li {
+    display:inline-block;
+    width:95px;
+    padding:8px 8px;
+    text-align:center;
+}
+
+@media screen and (max-width: 768px) {
+        .navbar {
+                height: 40px;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 12px 24px;
+        }
+        .navbar__menu {
+                margin-top: 10px;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                background-color: white;
+                z-index: 1;
+        }
+        .navbar__logo > img {
+                width: 32px;
+        }
+
+        .navbar__logo a {
+                font-size: 22px;
+                margin-left: 12px;
+        }
+        .navbar__menu li {
+                width: 100%;
+                text-align: center;
+        }
+        .navbar__sns {
+                display: none;
+                justify-content: center;
+                width: 100%;
+                background-color: white;
+                z-index: 1;
+         }
+        .navbar__toggleBtn {
+                 display: block;
+         }
+        .navbar__menu.active,
+        .navbar__sns.active {
+                display: flex;
+        }
+
+        li:hover .menu1_submenu {
+            display:none;
+        }
+}
